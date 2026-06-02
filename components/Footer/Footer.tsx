@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Instagram, Music, Linkedin, Globe } from 'lucide-react';
+import { Music, Heart, Mail, Globe } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -27,7 +27,7 @@ export default function Footer() {
               className="p-2 text-[var(--verde-oscuro)] hover:text-[var(--verde-medio)] transition"
               aria-label="Instagram"
             >
-              <Instagram size={20} />
+              <Share2 size={20} />
             </Link>
             <Link
               href="https://spotify.com/artist/tiagomdok"
@@ -48,13 +48,11 @@ export default function Footer() {
               <Globe size={20} />
             </Link>
             <Link
-              href="https://linkedin.com/in/tiagomdok"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:booking@tiagomdok.com"
               className="p-2 text-[var(--verde-oscuro)] hover:text-[var(--verde-medio)] transition"
-              aria-label="LinkedIn"
+              aria-label="Email"
             >
-              <Linkedin size={20} />
+              <Mail size={20} />
             </Link>
           </div>
 

@@ -3,7 +3,7 @@ import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
-  weight: ["400", "700"],
+  weight: ["400"],
   variable: "--font-dm-serif",
   subsets: ["latin"],
 });

@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tiago Mdok — Sitio Web Oficial
 
-## Getting Started
+Sitio web profesional de **Tiago Mdok**, productor musical, sound engineer y director musical de **Miracali Records**, radicado en Cali, Colombia.
 
-First, run the development server:
+## 🚀 Características
 
+- **Portafolio profesional** con reproductor de audio interactivo (WaveSurfer.js)
+- **Tienda digital** para vender beats e instrumentales (integración con Stripe)
+- **Calculadora de servicios** para cotizaciones automáticas
+- **Formulario de contacto** con integración Resend
+- **Diseño orgánico** con paleta de colores personalizada
+- **Responsive** en todos los dispositivos
+- **SEO optimizado** con metadata y structured data
+
+## 📦 Stack Tecnológico
+
+- **Framework:** Next.js 14 (App Router)
+- **Lenguaje:** TypeScript
+- **Estilos:** Tailwind CSS + CSS personalizado
+- **Audio:** WaveSurfer.js v7
+- **Formularios:** React Hook Form + Zod
+- **Pagos:** Stripe Checkout (integración pendiente)
+- **Email:** Resend (integración pendiente)
+- **Storage:** Cloudflare R2 (integración pendiente)
+- **Deploy:** Vercel
+
+## 🛠️ Instalación y Desarrollo
+
+### Ejecutar servidor de desarrollo
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Compilar para producción
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Estructura del Proyecto
 
-## Learn More
+```
+tiago-mdok-site/
+├── app/
+│   ├── globals.css          # Sistema de diseño y variables CSS
+│   ├── layout.tsx           # Layout raíz
+│   ├── page.tsx             # Home page
+│   └── ...
+├── components/
+│   ├── Navigation/          # Navbar
+│   ├── Footer/              # Footer
+│   ├── AudioPlayer/         # Reproductor con WaveSurfer.js
+│   └── ...
+├── data/
+│   └── tracks.ts            # Mock data
+└── ...
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 Páginas Implementadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ✅ `/` - Home page completa con todas las secciones
+- 📝 `/portfolio` - Por implementar
+- 📝 `/store` - Por implementar
+- 📝 `/services` - Por implementar
+- 📝 `/contact` - Por implementar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Sistema de Diseño
 
-## Deploy on Vercel
+Paleta orgánica de colores:
+- **Verdes:** Oscuro (#3D5A3E), Medio, Claro, Polvo
+- **Beiges:** Grano de cine (#F5F0E8)
+- **Cafés:** Textura de madera (#8B6F47)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tipografía:
+- **Títulos:** DM Serif Display
+- **Cuerpo:** DM Sans
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✅ Estado Actual
+
+- ✅ Setup Next.js + Tailwind + Google Fonts
+- ✅ Sistema de diseño (variables CSS y texturas)
+- ✅ Componentes: Navigation, Footer, AudioPlayer
+- ✅ Home page completa (todas las secciones)
+- ✅ Reproductor de audio con WaveSurfer.js
+- ✅ Data structure (tracks y productos)
+- 📝 Integración Stripe (checkout y webhook)
+- 📝 Integración Resend (emails)
+- 📝 Integración Cloudflare R2 (storage)
+- 📝 Páginas adicionales (portfolio, store, services, contact)
+
+## 🚀 Próximos Pasos
+
+1. Implementar páginas adicionales (portfolio, store, services, contact)
+2. Integrar API de Stripe para pagos
+3. Integrar Resend para emails
+4. Integrar Cloudflare R2 para almacenamiento
+5. Crear base de datos (Prisma + PostgreSQL)
+6. Dashboard de administración
+7. Deployment en Vercel
+
+## 📝 Notas para Desarrollo
+
+### Placeholders
+- **Audio:** Usando SoundHelix como placeholder → Reemplazar con URLs de R2
+- **Imágenes:** Usando gradientes CSS → Reemplazar con fotos reales
+- **Precios:** Ver comentarios `PRECIO_REFERENCIA` → Actualizar con valores finales
+
+## 📧 Contacto
+
+- Email: booking@tiagomdok.com
+- Instagram: @tiagomdok
+
+---
+
+**Hecho con ❤️ en Cali, Colombia**

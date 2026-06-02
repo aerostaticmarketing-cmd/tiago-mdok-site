@@ -45,7 +45,6 @@ export default function AudioPlayer({ tracks, compact = false }: AudioPlayerProp
           barRadius: 1,
           height: compact ? 32 : 48,
           url: track.audioUrl,
-          responsive: true,
         });
 
         ws.on('ready', () => {
