@@ -27,7 +27,7 @@ export default function Footer() {
               className="p-2 text-[var(--verde-oscuro)] hover:text-[var(--verde-medio)] transition"
               aria-label="Instagram"
             >
-              <Share2 size={20} />
+              <Heart size={20} />
             </Link>
             <Link
               href="https://spotify.com/artist/tiagomdok"
