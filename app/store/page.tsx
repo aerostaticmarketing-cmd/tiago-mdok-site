@@ -44,37 +44,40 @@ export default function StorePage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {allProducts.map((product) => (
-                <div key={product.id} className="tex-leaf-light p-6 rounded-[12px] border-l-4 border-[var(--verde-medio)] hover:shadow-lg transition">
+                <div key={product.id} className="tex-leaf-light p-8 rounded-[16px] border-l-4 border-[var(--verde-medio)] hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col">
                   {/* Artwork */}
-                  <div className="w-full aspect-square bg-gradient-to-br from-[var(--verde-medio)] to-[var(--verde-oscuro)] rounded-[8px] mb-4 flex items-center justify-center">
-                    <p className="text-[12px] text-[var(--beige)] opacity-40">Artwork</p>
+                  <div className="w-full aspect-square bg-gradient-to-br from-[var(--verde-medio)] to-[var(--verde-oscuro)] rounded-[12px] mb-6 flex items-center justify-center">
+                    <p className="text-[14px] text-[var(--beige)] opacity-40 font-medium">Artwork</p>
                   </div>
 
                   {/* Badge */}
-                  <div className="flex gap-2 mb-3">
-                    <span className="pill text-[9px]">{product.type === 'beat' ? 'BEAT' : 'PACK'}</span>
+                  <div className="flex gap-3 mb-4">
+                    <span className="pill text-[10px] font-bold">{product.type === 'beat' ? '🎵 BEAT' : '📦 PACK'}</span>
                     {product.featured && (
-                      <span className="pill text-[9px] bg-[var(--cafe-suave)] text-[var(--cafe)]">DESTACADO</span>
+                      <span className="pill text-[10px] bg-[var(--cafe-suave)] text-[var(--cafe)] font-bold">⭐ DESTACADO</span>
                     )}
                   </div>
 
                   {/* Info */}
-                  <h3 className="text-[16px] font-bold text-[var(--verde-oscuro)] mb-2">{product.name}</h3>
-                  <p className="text-[12px] text-[var(--gris-suave)] mb-4 line-clamp-2">{product.description}</p>
+                  <h3 className="text-[18px] font-bold text-[var(--verde-oscuro)] mb-3">{product.name}</h3>
+                  <p className="text-[13px] text-[var(--gris-suave)] mb-5 line-clamp-2">{product.description}</p>
 
                   {/* Meta */}
                   {product.bpm && (
-                    <p className="text-[11px] text-[var(--gris-suave)] mb-4">
+                    <p className="text-[12px] text-[var(--gris-suave)] mb-6 font-medium">
                       {product.genre} · {product.bpm} BPM {product.key && `· ${product.key}`}
                     </p>
                   )}
 
                   {/* Price and CTA */}
-                  <div className="flex items-center justify-between">
-                    <p className="text-[16px] font-bold text-[var(--verde-oscuro)]">
-                      USD ${product.price}
-                    </p>
-                    <button className="btn-primary text-[11px] px-4 py-2">
+                  <div className="flex items-end justify-between gap-4 mt-auto">
+                    <div>
+                      <p className="text-[12px] text-[var(--gris-suave)] uppercase tracking-[0.08em] font-bold">Desde</p>
+                      <p className="text-[22px] font-bold text-[var(--verde-oscuro)]">
+                        ${product.price}
+                      </p>
+                    </div>
+                    <button className="btn-primary text-[11px]">
                       {product.type === 'beat' ? 'Licenciar' : 'Comprar'}
                     </button>
                   </div>

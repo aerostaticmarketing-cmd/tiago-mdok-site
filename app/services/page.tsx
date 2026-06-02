@@ -58,24 +58,25 @@ export default function ServicesPage() {
         {/* Services Grid */}
         <section className="tex-grain py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, i) => (
                 <div
                   key={i}
-                  className={`p-6 rounded-[12px] flex flex-col justify-between h-full ${
+                  className={`p-10 rounded-[16px] flex flex-col justify-between h-full border-4 border-transparent hover:border-[var(--verde-claro)] transition ${
                     i % 3 === 0 ? 'tex-leaf-mid' : i % 3 === 1 ? 'tex-grain-mid' : 'tex-wood'
                   }`}
                 >
                   <div>
-                    <h3 className="text-[18px] font-bold text-[var(--negro)] mb-3" style={{ fontFamily: 'var(--font-display)' }}>
+                    <h3 className="text-[20px] font-bold text-[var(--negro)] mb-5" style={{ fontFamily: 'var(--font-display)' }}>
                       {service.title}
                     </h3>
-                    <p className="text-[13px] text-[var(--gris-suave)] leading-[1.6]">{service.description}</p>
+                    <p className="text-[14px] text-[var(--gris-suave)] leading-[1.7]">{service.description}</p>
                   </div>
-                  <div className="mt-6">
-                    <p className="text-[16px] font-bold text-[var(--negro)] mb-4">{service.price}</p>
+                  <div className="mt-8">
+                    <p className="text-[12px] uppercase tracking-[0.08em] font-bold text-[var(--gris-suave)] mb-2">Desde</p>
+                    <p className="text-[24px] font-bold text-[var(--verde-oscuro)] mb-6">{service.price}</p>
                     <button className="btn-primary text-[11px] w-full">
-                      Cotizar →
+                      Solicitar cotización
                     </button>
                   </div>
                 </div>

@@ -48,12 +48,12 @@ export default function Home() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <Link href="#portafolio-preview" className="btn-primary">
-                Escuchar demos
+            <div className="flex flex-col sm:flex-row gap-6 animate-slide-up pt-4" style={{ animationDelay: '0.4s' }}>
+              <Link href="#portafolio-preview" className="btn-primary inline-block">
+                ▶ Escuchar demos
               </Link>
-              <Link href="/contact" className="btn-ghost">
-                Ver EPK →
+              <Link href="/contact" className="btn-secondary inline-block">
+                Descargar EPK
               </Link>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function Home() {
                   title: 'Mezcla y masterización',
                   description: 'Optimización del sonido para todas las plataformas',
                   price: 'USD $150+',
-                  color: 'tex-grain',
+                  color: 'tex-grain-mid',
                 },
                 {
                   title: 'Sync licensing & Sound design',
@@ -180,17 +180,17 @@ export default function Home() {
                   color: 'tex-wood',
                 },
               ].map((service, i) => (
-                <div key={i} className={`${service.color} p-6 md:p-8 rounded-[12px] flex flex-col justify-between h-full`}>
+                <div key={i} className={`${service.color} p-8 md:p-10 rounded-[16px] flex flex-col justify-between h-full border-2 border-transparent hover:border-[var(--verde-claro)] transition`}>
                   <div>
-                    <h3 className="text-[16px] md:text-[18px] font-bold text-[var(--negro)] mb-3" style={{ fontFamily: 'var(--font-display)' }}>
+                    <h3 className="text-[18px] md:text-[20px] font-bold text-[var(--negro)] mb-4" style={{ fontFamily: 'var(--font-display)' }}>
                       {service.title}
                     </h3>
-                    <p className="text-[13px] text-[var(--gris-suave)] mb-4">{service.description}</p>
+                    <p className="text-[14px] text-[var(--gris-suave)] mb-6 leading-[1.6]">{service.description}</p>
                   </div>
                   <div>
-                    <p className="text-[14px] font-bold text-[var(--negro)] mb-4">{service.price}</p>
-                    <Link href="/services" className="btn-ghost text-[12px]">
-                      Cotizar →
+                    <p className="text-[18px] font-bold text-[var(--verde-oscuro)] mb-6">{service.price}</p>
+                    <Link href="/services" className="btn-primary inline-block text-[12px]">
+                      Cotizar proyecto
                     </Link>
                   </div>
                 </div>
@@ -275,39 +275,51 @@ export default function Home() {
               </div>
 
               {/* Right - Formulario placeholder */}
-              <div className="bg-[var(--beige)] rounded-[12px] p-8">
-                <form className="space-y-4">
+              <div className="bg-[var(--beige)] rounded-[16px] p-10 border-4 border-[var(--verde-claro)]">
+                <form className="space-y-5">
                   <div>
+                    <label className="block text-[11px] uppercase tracking-[0.1em] font-bold text-[var(--verde-oscuro)] mb-2">
+                      Tu nombre
+                    </label>
                     <input
                       type="text"
-                      placeholder="Tu nombre"
-                      className="w-full px-4 py-3 rounded-[8px] border border-[var(--beige-dark)] focus:outline-none focus:border-[var(--verde-oscuro)] text-[13px]"
+                      placeholder="Tu nombre completo"
+                      className="w-full px-5 py-4 rounded-[10px] border-2 border-[var(--beige-dark)] focus:outline-none focus:border-[var(--verde-oscuro)] text-[13px] font-medium"
                     />
                   </div>
                   <div>
+                    <label className="block text-[11px] uppercase tracking-[0.1em] font-bold text-[var(--verde-oscuro)] mb-2">
+                      Tu email
+                    </label>
                     <input
                       type="email"
-                      placeholder="Tu email"
-                      className="w-full px-4 py-3 rounded-[8px] border border-[var(--beige-dark)] focus:outline-none focus:border-[var(--verde-oscuro)] text-[13px]"
+                      placeholder="tu@email.com"
+                      className="w-full px-5 py-4 rounded-[10px] border-2 border-[var(--beige-dark)] focus:outline-none focus:border-[var(--verde-oscuro)] text-[13px] font-medium"
                     />
                   </div>
                   <div>
-                    <select className="w-full px-4 py-3 rounded-[8px] border border-[var(--beige-dark)] focus:outline-none focus:border-[var(--verde-oscuro)] text-[13px]">
-                      <option>Tipo de consulta</option>
-                      <option>Producción</option>
-                      <option>Mezcla</option>
-                      <option>Sync</option>
+                    <label className="block text-[11px] uppercase tracking-[0.1em] font-bold text-[var(--verde-oscuro)] mb-2">
+                      Tipo de consulta
+                    </label>
+                    <select className="w-full px-5 py-4 rounded-[10px] border-2 border-[var(--beige-dark)] focus:outline-none focus:border-[var(--verde-oscuro)] text-[13px] font-medium">
+                      <option>Selecciona un tipo</option>
+                      <option>Producción musical</option>
+                      <option>Mezcla y masterización</option>
+                      <option>Sync licensing</option>
                       <option>Otro</option>
                     </select>
                   </div>
                   <div>
+                    <label className="block text-[11px] uppercase tracking-[0.1em] font-bold text-[var(--verde-oscuro)] mb-2">
+                      Cuéntame sobre tu proyecto
+                    </label>
                     <textarea
-                      placeholder="Cuéntame sobre tu proyecto..."
+                      placeholder="Describe tu idea, proyecto o consulta..."
                       rows={4}
-                      className="w-full px-4 py-3 rounded-[8px] border border-[var(--beige-dark)] focus:outline-none focus:border-[var(--verde-oscuro)] text-[13px] resize-none"
+                      className="w-full px-5 py-4 rounded-[10px] border-2 border-[var(--beige-dark)] focus:outline-none focus:border-[var(--verde-oscuro)] text-[13px] font-medium resize-none"
                     ></textarea>
                   </div>
-                  <button type="submit" className="btn-primary w-full text-[12px]">
+                  <button type="submit" className="btn-primary w-full text-[12px] mt-6">
                     Enviar mensaje
                   </button>
                 </form>

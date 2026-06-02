@@ -124,63 +124,77 @@ button:active {
 .btn-primary {
   background-color: var(--verde-oscuro);
   color: var(--beige);
-  padding: 12px 28px;
-  border-radius: 22px;
-  font-size: 14px;
+  padding: 16px 40px;
+  border-radius: 28px;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-weight: 700;
   transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(61, 90, 62, 0.25);
 }
 
 .btn-primary:hover {
   background-color: var(--verde-medio);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(61, 90, 62, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
-  border: 1px solid var(--verde-suave);
+  border: 2px solid var(--verde-oscuro);
   color: var(--verde-oscuro);
-  padding: 12px 28px;
-  border-radius: 22px;
-  font-size: 14px;
+  padding: 16px 40px;
+  border-radius: 28px;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-weight: 700;
   background: transparent;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .btn-secondary:hover {
-  background-color: var(--verde-polvo);
-  border-color: var(--verde-medio);
+  background-color: var(--verde-oscuro);
+  color: var(--beige);
+  transform: translateY(-3px);
 }
 
 .btn-ghost {
   background: transparent;
   color: var(--verde-oscuro);
-  padding: 12px 28px;
-  border-radius: 22px;
-  font-size: 14px;
+  padding: 16px 40px;
+  border-radius: 28px;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-weight: 700;
   transition: all 0.3s ease;
   position: relative;
+  border: 2px solid transparent;
 }
 
 .btn-ghost::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: var(--verde-oscuro);
-  border-radius: 1px;
+  border-radius: 2px;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
+}
+
+.btn-ghost:hover {
+  transform: translateY(-2px);
 }
 
 .btn-ghost:hover::after {
