@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation/Navigation';
 import Footer from '@/components/Footer/Footer';
 import AudioPlayer from '@/components/AudioPlayer/AudioPlayer';
 import HeroSection from '@/components/HeroSection/HeroSection';
+import ControlRoom from '@/components/AudioVisuals/ControlRoom';
 import { portfolioTracks, credits, beats } from '@/data/tracks';
 import Link from 'next/link';
 
@@ -13,6 +14,9 @@ export default function Home() {
       <main className="flex-1">
         {/* HERO SECTION */}
         <HeroSection />
+
+        {/* CONTROL ROOM - Interfaz de mezcla */}
+        <ControlRoom />
 
         {/* ═══════════════════════════════════════════════════════════ */}
         {/* STATS BAR */}
