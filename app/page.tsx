@@ -3,7 +3,8 @@ import Footer from '@/components/Footer/Footer';
 import AudioPlayer from '@/components/AudioPlayer/AudioPlayer';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import ControlRoom from '@/components/AudioVisuals/ControlRoom';
-import { portfolioTracks, credits, beats } from '@/data/tracks';
+import CreditsSection from '@/components/CreditsSection';
+import { portfolioTracks, beats } from '@/data/tracks';
 import Link from 'next/link';
 
 export default function Home() {
@@ -46,37 +47,7 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════════ */}
         {/* CRÉDITOS DESTACADOS */}
         {/* ═══════════════════════════════════════════════════════════ */}
-        <section className="tex-grain py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[var(--negro)] mb-12" style={{ fontFamily: 'var(--font-display)' }}>
-              Créditos destacados
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Music Credits */}
-              <div className="space-y-4">
-                <p className="text-[12px] uppercase tracking-[0.08em] text-[var(--gris-suave)] font-medium mb-6">Créditos musicales</p>
-                {credits.music.map((credit, i) => (
-                  <div key={i} className="tex-leaf-light border-l-4 border-[var(--verde-medio)] p-4 rounded-[8px] hover:shadow-lg transition-all">
-                    <h4 className="text-[14px] font-bold text-[var(--verde-oscuro)]">{credit.artist}</h4>
-                    <p className="text-[12px] text-[var(--gris-suave)]">{credit.role}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Cinema Credits */}
-              <div className="space-y-4">
-                <p className="text-[12px] uppercase tracking-[0.08em] text-[var(--gris-suave)] font-medium mb-6">Cine & TV</p>
-                {credits.cinema.map((credit, i) => (
-                  <div key={i} className="tex-wood border-l-4 border-[var(--cafe-claro)] p-4 rounded-[8px] hover:shadow-lg transition-all">
-                    <h4 className="text-[14px] font-bold text-[var(--cafe)]">{credit.title}</h4>
-                    <p className="text-[12px] text-[var(--gris-suave)]">{credit.platform} · {credit.role}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <CreditsSection />
 
         {/* ═══════════════════════════════════════════════════════════ */}
         {/* PORTAFOLIO PREVIEW */}
